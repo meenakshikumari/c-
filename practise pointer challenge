@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int *apply_all(const int *a1, int s1, const int *a2, int s2)
+{
+    int s3 = s1 * s2;
+    int *a3 = new int[s3];
+    int p = 0;
+    for(size_t i = 0; i<s1; i++){
+        for(size_t j = 0; j<s2; j++){
+            a3[p] = a2[j] * a1[i];
+            p++;
+        }
+    }
+            
+    return a3;
+}
+
+void print(int *a, int s){
+    for(int i=0; i<s; i++)
+        cout << a[i] << " ";
+    cout << endl;  
+}
+
+int main()
+{
+    int a1[] {1,2,3,4};
+    int a2[] {10,20,30};
+    int s1 = sizeof a1 / sizeof a1[0];
+    
+    int s2 = sizeof a2 / sizeof a2[0];
+    
+    cout << "Array 1 : ";
+    print(a1,s1);
+    cout << "Array 2 : " ;
+    print(a2,s2);
+    
+    int *a3 = apply_all(a1, s1, a2, s2);
+    int s3 = s1 * s2;
+    
+    cout << "Array 3 : ";
+    print(a3,s3);
+    
+    return 0;
+}
