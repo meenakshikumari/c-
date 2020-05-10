@@ -1,0 +1,87 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    vector <string> stooges {"Larry", "Moe", "Curly"};
+    vector <string> *vec_ptr {&stooges};
+    
+    cout << &(stooges[0]) << endl;
+    cout << &(stooges[1]) << endl;
+    cout << &(stooges[2]) << endl;
+        //  cout << *(*vec_ptr) << endl;
+    cout << (*vec_ptr).at(0) << endl;
+    
+    for (auto &str:stooges)
+        cout << &str << " : " << endl;
+    
+    
+    // int *int_ptr = new int;
+    // cout << int_ptr <<endl;
+    // cout << *int_ptr << endl;
+    // *int_ptr = 13;
+    // cout << *int_ptr << endl;
+    // delete int_ptr;
+    // cout << *int_ptr << endl;
+    
+    
+    // double *arr_ptr {};
+    // int size {};
+    // cout << "Enter the size of aray: "<<endl;
+    // cin >> size;
+    
+    // arr_ptr = new double[size];
+    // cout << arr_ptr << endl;
+    // cout << *arr_ptr << endl;
+    // *arr_ptr = 1.2;
+    // cout<<"value is :" << *arr_ptr << endl;
+    
+    // for (auto i=1; i<size; i++){
+    //     arr_ptr[i] = arr_ptr[i-1] + 1;
+    //     cout<<"value is :"<<arr_ptr[i]<<endl;
+    // }
+    
+    // int size2 {6};
+    // double *arr_ptr2 = new double [size2];
+    // int n = arr_ptr2 - arr_ptr;
+    // cout << "value OF N: " << n << endl;
+    // n = arr_ptr - arr_ptr2;
+    // cout << "value OF N: " << n << endl;
+        //(*arr_ptr)[i] = (*arr_ptr) + 1;
+    // *arr_ptr = [2.3, 4.5, 6.4];
+    //cout << (*arr_ptr)[2] << endl;
+    
+    // delete [] arr_ptr;
+    // cout << *arr_ptr << endl;
+    // cout << arr_ptr << endl;
+    
+    // char name[] {"Frank"};
+    // char *p1 {name}; // address of F
+    // char *p2 {(name + 3)}; // address of n
+    
+    // cout << name << endl;
+    // cout << sizeof name << endl; // Frank size is 5 along with null char becomes 6
+    // cout << p1 << " " << *p1 << endl;
+    // cout << p2 << " " << *p2 << endl;
+    
+    // cout << (p2 - p1) << endl;
+    
+    
+    
+    
+    
+    
+
+    return 0;
+}
